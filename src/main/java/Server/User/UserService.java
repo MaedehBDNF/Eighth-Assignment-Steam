@@ -39,7 +39,7 @@ public class UserService {
         response.setTitle(Title.register);
         UserEntity userEntity = new UserEntity();
 
-        if (findByUsername(data.username).getUsername() != null) {
+        if (findByUsername(data.username).getDateOfBirth() != null) {
             response.setError(Error.duplicateUsername);
             return response;
         }
