@@ -116,6 +116,7 @@ public class ClientMain {
         String error = checkError(response);
         if (error.equals("none")){
             currentUserID = objectMapper.convertValue(response.getData(), UserEntity.class).getId();
+            System.out.println("You signed up and logged in successfully!");
             menu();
         } else {
             System.out.println(error);
